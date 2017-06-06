@@ -1,0 +1,156 @@
+### ---------------------------------------------------------------------
+#    MINIMUM TECHNICAL REQUIREMENTS
+### ---------------------------------------------------------------------
+# 1) Include at least 3 sprites
+# 2) Use Actions blocks to control sprites' movements
+# 3) Group repeated actions into Functions
+## Ex: pitch(), hit()
+
+stage.set_background("baseballfield")
+ball = codesters.Sprite("baseball", 10, 0)
+player1 = codesters.Sprite("player4", 8, -150)
+player1.set_size(.5)
+player2 = codesters.Sprite("player5", -200, -150)
+player2.set_size(.5)
+player3 = codesters.Sprite("player6", -175, -150)
+player3.set_size(.5)
+player4 = codesters.Sprite("player3", -150, -150)
+player4.set_size(.5)
+player5 = codesters.Sprite("player3", -150, -150)
+player5.set_size(.5)
+player6 = codesters.Sprite("player6", -175, -150)
+player6.set_size(.5)
+
+# sprite = codesters.Sprite("player5")
+
+def pitch():
+    ball.go_to(10, 0)
+    ball.glide_to(8,-150)
+    ball.set_speed(5)
+
+def hit():
+    bbat = codesters.Sprite("baseballbat", 0, 0)
+    bbat.say("It's a hit!")
+    stage.wait(1)
+    bbat.hide()
+
+def play1():
+    player1.glide_to(212, 20)
+    # first base 
+
+def play2():
+    player1.glide_to(10, 200)
+    player2.glide_to(212, 20)
+# second base
+
+
+def play3():
+    player1.glide_to(-200, 15)
+    player2.glide_to(10, 200)
+    player3.glide_to(212, 20)
+
+# third base
+
+
+
+def play4():
+    player1.glide_to(8, -150)
+    player2.glide_to(-200, 15)
+    player3.glide_to(10, 200)
+    player4.glide_to(212, 20)
+
+
+
+def play5():
+    player2.glide_to(8, -150)
+    player3.glide_to(-200, 15)
+    player4.glide_to(10, 200)
+    player5.glide_to(212, 20)
+
+
+
+def play6():
+    player3.glide_to(8, -150)
+    player4.glide_to(-200, 15)
+    player5.glide_to(10, 200)
+    player6.glide_to(212, 20)
+    stage.wait(2)
+
+pitch()
+
+stage.wait(1)
+
+hit()
+
+play1()
+
+stage.wait(.5)
+
+player2.go_to(8, -150)
+
+pitch()
+
+hit()
+
+stage.wait(.5)
+
+play2()
+
+stage.wait(.5)
+
+player3.go_to(8, -150)
+
+pitch()
+
+hit()
+
+stage.wait(.5)
+
+play3()
+
+stage.wait(.5)
+
+player4.go_to(8, -150)
+
+pitch()
+
+hit()
+
+stage.wait(.5)
+
+play4()
+
+player1.go_to(-190, -150)
+
+player1.say("I scored 1 point!")
+
+player5.go_to(8, -150)
+
+pitch()
+
+hit()
+
+stage.wait(.5)
+
+play5()
+
+player2.go_to(-175, -175)
+
+player2.say("I scored 1 point!")
+
+stage.wait(.5)
+
+player6.go_to(8, -150)
+
+pitch()
+
+hit()
+
+stage.wait(.5)
+
+play6()
+
+player3.go_to(-160, -200)
+
+player3.say("I scored 1 point!")
+
